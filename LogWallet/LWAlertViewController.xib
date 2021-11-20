@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LWAlertViewController" customModule="LogWallet" customModuleProvider="target">
+            <connections>
+                <outlet property="messageLabel" destination="XMp-gQ-2uE" id="0le-QH-Pow"/>
+                <outlet property="stack" destination="87U-Lw-1LV" id="bSh-86-0ab"/>
+                <outlet property="titleLabel" destination="g9g-sU-jTb" id="wR6-KG-CSk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WoodBackground" translatesAutoresizingMaskIntoConstraints="NO" id="5cM-Um-G83">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIP-bn-GAf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WhE-Ey-ASv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="systemUltraThinMaterial"/>
+                </visualEffectView>
+                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="87U-Lw-1LV">
+                    <rect key="frame" x="20" y="423.5" width="374" height="49"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-sU-jTb">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMp-gQ-2uE">
+                            <rect key="frame" x="0.0" y="28.5" width="374" height="20.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="87U-Lw-1LV" secondAttribute="trailing" constant="20" id="28J-9S-ydk"/>
+                <constraint firstItem="5cM-Um-G83" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7Q7-hj-JLG"/>
+                <constraint firstItem="87U-Lw-1LV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="8Gv-Vb-zGT"/>
+                <constraint firstItem="sIP-bn-GAf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FPd-ou-iXF"/>
+                <constraint firstItem="87U-Lw-1LV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Fl2-Mc-BpG"/>
+                <constraint firstAttribute="bottom" secondItem="sIP-bn-GAf" secondAttribute="bottom" id="UAK-SY-fxL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5cM-Um-G83" secondAttribute="trailing" id="Ulq-1Y-bbg"/>
+                <constraint firstItem="sIP-bn-GAf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="dC2-RT-o9g"/>
+                <constraint firstItem="5cM-Um-G83" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lU0-WO-hIT"/>
+                <constraint firstAttribute="bottom" secondItem="5cM-Um-G83" secondAttribute="bottom" id="o71-pM-PpH"/>
+                <constraint firstItem="sIP-bn-GAf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zdV-8l-UK6"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="84.375"/>
+        </view>
+        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="EFG-HQ-Ats">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="-116" y="-303"/>
+        </imageView>
+    </objects>
+    <resources>
+        <image name="WoodBackground" width="767" height="512"/>
+    </resources>
+</document>
