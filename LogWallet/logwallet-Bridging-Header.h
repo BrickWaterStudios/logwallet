@@ -21,3 +21,4 @@
 #import "BRCopyLabel.h"
 #import "BRSettingsViewController.h"
 #import "BRTxDetailViewController.h"
+#import "BRSeedViewController.h"

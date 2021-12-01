@@ -26,4 +26,12 @@ class LWWelcomeController: UIViewController {
         // anytime from the account page
         performSegue(withIdentifier: "backup", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "backup" {
+            if let destination = segue.destination as? UINavigationController, let vc = destination.topViewController as? BRSeedViewController {
+                vc.isNewWallet = true
+            }
+        }
+    }
 }

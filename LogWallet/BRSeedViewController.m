@@ -194,6 +194,12 @@
 
 - (IBAction)done:(id)sender
 {
+    if (self.isNewWallet)
+    {
+        [self performSegueWithIdentifier:@"account" sender:self];
+        return;
+    }
+    
     if (self.navigationController.viewControllers.firstObject != self) return;
     
     self.navigationController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;

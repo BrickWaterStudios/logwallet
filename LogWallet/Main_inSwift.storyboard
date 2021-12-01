@@ -188,7 +188,7 @@
         <!--Navigation Controller-->
         <scene sceneID="B4T-2P-OuJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="aUl-lk-IE1" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="accountNav" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="aUl-lk-IE1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="VVW-Gp-fkk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c0p-hv-vja">
@@ -223,7 +223,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YDy-pA-ALd">
-                                <rect key="frame" x="117" y="754" width="180" height="108"/>
+                                <rect key="frame" x="117" y="746" width="180" height="108"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgN-4J-qix">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
@@ -241,6 +241,9 @@
                                             <color key="titleColor" red="0.98008280989999996" green="0.46029669049999999" blue="0.13201591369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTapNewWallet:" destination="Lhu-9g-zBb" eventType="touchUpInside" id="ZXl-wG-oUh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5T-NM-wXd">
                                         <rect key="frame" x="0.0" y="64" width="180" height="44"/>
@@ -275,7 +278,7 @@
                             <constraint firstItem="hmz-tP-BbV" firstAttribute="top" secondItem="CJW-r8-CNk" secondAttribute="top" id="Lbe-0h-Cgb"/>
                             <constraint firstItem="YDy-pA-ALd" firstAttribute="centerX" secondItem="CJW-r8-CNk" secondAttribute="centerX" id="VU6-mX-NQU"/>
                             <constraint firstAttribute="bottom" secondItem="hmz-tP-BbV" secondAttribute="bottom" id="nzi-VH-N4y"/>
-                            <constraint firstItem="YDy-pA-ALd" firstAttribute="bottom" secondItem="Vwk-nI-vl7" secondAttribute="bottom" id="vHg-5h-cQx"/>
+                            <constraint firstItem="YDy-pA-ALd" firstAttribute="bottom" secondItem="Vwk-nI-vl7" secondAttribute="bottom" constant="-8" id="vHg-5h-cQx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KBV-cu-4qj"/>
@@ -287,7 +290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ev-iG-RRV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939" y="82"/>
+            <point key="canvasLocation" x="937.68115942028987" y="81.696428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CWX-UT-xYy">
@@ -1484,6 +1487,7 @@ WRITE IT DOWN and keep it safe. Lose
                     <navigationItem key="navigationItem" id="B4r-F5-J9F"/>
                     <connections>
                         <outlet property="seedLabel" destination="aDj-3k-bpy" id="uVO-Sd-TYC"/>
+                        <segue destination="aUl-lk-IE1" kind="show" identifier="account" id="7wJ-VW-7Fa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPg-lK-awN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1511,7 +1515,7 @@ WRITE IT DOWN and keep it safe. Lose
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rqa-La-M92"/>
+        <segue reference="HkH-4A-vJT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="WoodBackground" width="767" height="512"/>

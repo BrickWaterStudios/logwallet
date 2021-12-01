@@ -27,4 +27,6 @@
 
 @interface BRSeedViewController : UIViewController <UIAlertViewDelegate>
 
+@property (nonatomic, assign) BOOL isNewWallet;
+
 @end
